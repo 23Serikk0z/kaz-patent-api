@@ -1,0 +1,25 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: config-service
+
+  profiles:
+    active: native
+
+
+  cloud:
+    config:
+      server:
+
+        native:
+          search-locations: classpath:/configs
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, env, refresh
+
+

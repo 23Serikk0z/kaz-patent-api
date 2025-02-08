@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: eureka-service
+
+  profiles:
+    active: ${GIT_BRANCH:dev}
+
+  config:
+    import: "configserver:"

@@ -1,0 +1,18 @@
+eureka:
+  instance:
+    hostname: preprod
+
+  client:
+    service-url:
+      defaultZone: http://preprod:8761/eureka
+
+
+spring:
+  cloud:
+    config:
+      override-system-properties: false
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
