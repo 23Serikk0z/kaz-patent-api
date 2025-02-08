@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: auth-service
+
+  profiles:
+    active: ${GIT_BRANCH}
+
+  config:
+    import: "configserver:"
+
+
+  cloud:
+    config:
+      uri: http://localhost:8000
+      profile: ${spring.profiles.active}

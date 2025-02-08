@@ -1,25 +1,10 @@
 server:
   port: 8081
-  context-path: auth
 
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
-
-  jpa:
-    hibernate:
-      ddl-auto: none
-    database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-
-
-  flyway:
-    baseline-on-migrate: true
-    enabled: true
-    baseline-description: "init"
-    baseline-version: 0
-    user: ${spring.datasource.username}
-    password: ${spring.datasource.password}
+keycloak:
+  server_url: http://localhost:8080
+  realm: my-realm
+  client-id: kaz-patent-sso
+  client-secret: ROcmFcHOa77HQFAenjDlY0SlXDwi6SiA
+  admin-username: admin
+  admin-password: admin

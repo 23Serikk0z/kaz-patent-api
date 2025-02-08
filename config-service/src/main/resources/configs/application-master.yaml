@@ -1,16 +1,15 @@
 eureka:
   instance:
     hostname: prod
-
   client:
     service-url:
       defaultZone: http://prod:8761/eureka
-
 
 spring:
   cloud:
     config:
       override-system-properties: false
+
 
 management:
   tracing:
