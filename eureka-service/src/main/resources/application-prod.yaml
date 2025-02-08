@@ -5,4 +5,4 @@ spring:
   cloud:
     config:
       uri: http://localhost:8000
-      profile: ${GIT_BRANCH:master}
+      profile: ${GIT_BRANCH}
